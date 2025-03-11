@@ -44,4 +44,8 @@ public class Utils extends BaseTest {
         driver.navigate().forward();
     }
 
+    public static void test(){
+        
+    }
+
 }
