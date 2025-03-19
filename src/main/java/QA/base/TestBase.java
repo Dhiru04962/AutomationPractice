@@ -30,7 +30,6 @@ public static Properties prop;
         }catch (IOException e){
             e.printStackTrace();
         }
-
     }
     public static void initialization(){
         String browserName = prop.getProperty("browser");
