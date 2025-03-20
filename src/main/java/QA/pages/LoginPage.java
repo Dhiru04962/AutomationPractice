@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.concurrent.TimeUnit;
+
 public class LoginPage extends TestBase {
 
     @FindBy(xpath = "//input[@name='email']")
@@ -26,6 +28,7 @@ public class LoginPage extends TestBase {
    public void login (String usr, String psd){
        username.sendKeys(usr);
        password.sendKeys(psd);
+       driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
        LoginBtn.click();
    }
 }

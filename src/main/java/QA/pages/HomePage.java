@@ -5,20 +5,21 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.concurrent.TimeUnit;
+
 public class HomePage extends TestBase {
 
-    @FindBy(xpath = "//input[@name='email']")
-    WebElement Company_tittle ;
-    @FindBy(xpath = "//span[text()='Dhirendra  kumar ']")
+    @FindBy(xpath = "//span[@class='user-display']")
     WebElement User_name ;
 
     public HomePage(){
         PageFactory.initElements(driver,this);
+
     }
-    public void VerifyCompanyTittle(){
-        driver.getTitle();
-    }
-    public void VerifyUserNameTittle(){
-        driver.getTitle();
+    public boolean VerifyUserNameTittle(){
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        boolean blResult = false;
+       blResult= User_name.isDisplayed();
+       return blResult;
     }
 }
