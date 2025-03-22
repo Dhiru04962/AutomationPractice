@@ -3,17 +3,17 @@ package QA.testcases;
 import QA.base.TestBase;
 import QA.pages.HomePage;
 import QA.pages.LoginPage;
+import QA.pages.RubbishBinPage;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class HomePageTest extends TestBase {
+public class RubbishBinPageTest extends TestBase {
 
     LoginPage loginPage;
-    HomePage homePage;
-
-    public HomePageTest() {
+    RubbishBinPage rubbishBinPage;
+    public RubbishBinPageTest() {
         super();
     }
     @BeforeMethod
@@ -24,13 +24,15 @@ public class HomePageTest extends TestBase {
 
     }
     @Test(priority = 1)
-    public void validateCompanyNameTittle(){
-        HomePage homePage=   new HomePage();
-       Assert.assertTrue( homePage.VerifyUserNameTittle());
+    public void ClickPurgeAllBtn(){
+        RubbishBinPage rubbishBinPage1=   new RubbishBinPage();
+        rubbishBinPage1.ClickOnDeleteBtn();
+        rubbishBinPage1.ClickOnPurgeAllBtn();
+        rubbishBinPage1.ClickOnOkBtn();
     }
-
     @AfterMethod
-    public void tearDown() {
+    public void tearDown(){
         driver.quit();
     }
+
 }

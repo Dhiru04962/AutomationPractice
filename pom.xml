@@ -84,6 +84,13 @@
             <artifactId>extentreports</artifactId>
             <version>5.0.9</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/tech.grasshopper/extentreport-allure-annotation -->
+        <dependency>
+            <groupId>tech.grasshopper</groupId>
+            <artifactId>extentreport-allure-annotation</artifactId>
+            <version>1.0.2</version>
+        </dependency>
+
     </dependencies>
 
 </project>
