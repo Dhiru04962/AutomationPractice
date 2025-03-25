@@ -4,6 +4,7 @@ import QA.base.TestBase;
 import QA.pages.ForgotPasswordPage;
 import QA.pages.HomePage;
 import QA.pages.LoginPage;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -26,10 +27,15 @@ public class ForgotPassTest extends TestBase {
 
     }
     @Test
-    public void ValidateForgotPasaBtn(){
+    public void ValidateForgotPassBtn(){
         ForgotPasswordPage forgotPasswordPage = new ForgotPasswordPage();
         forgotPasswordPage.validateForgotBtn();
         driver.manage().timeouts().implicitlyWait(IMPLICIT_WAIT, TimeUnit.SECONDS);
         forgotPasswordPage.EmailText(prop.getProperty("username"));
+        forgotPasswordPage.ClickOnRestBtn();
+    }
+    @AfterMethod
+    public void tearDown(){
+        driver.quit();
     }
 }

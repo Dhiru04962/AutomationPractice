@@ -30,5 +30,6 @@ public class LoginPage extends TestBase {
        password.sendKeys(psd);
        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
        LoginBtn.click();
+
    }
 }

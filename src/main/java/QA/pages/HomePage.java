@@ -21,5 +21,6 @@ public class HomePage extends TestBase {
         boolean blResult = false;
        blResult= User_name.isDisplayed();
        return blResult;
+
     }
 }

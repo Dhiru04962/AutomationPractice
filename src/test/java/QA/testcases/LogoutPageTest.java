@@ -7,6 +7,7 @@ import QA.pages.LogoutPage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -38,6 +39,10 @@ public class LogoutPageTest extends TestBase {
     public void ClickOnLogoutBtn() {
         LogoutPage logoutPage = new LogoutPage();
         logoutPage.ClickOnLogoutBtn();
+    }
+    @AfterMethod
+    public void tearDown(){
+        driver.quit();
     }
 }
 

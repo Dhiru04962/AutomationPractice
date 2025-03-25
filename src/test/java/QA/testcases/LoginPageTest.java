@@ -25,11 +25,9 @@ public class LoginPageTest extends TestBase {
     public void ValidateSignupElementTestOnLoginPage(){
         loginPage.validateLoginBtn();
 
-
-
     }
     @Test(priority = 2)
-    public void loginTest() {
+    public void loginTest(){
         loginPage.login(prop.getProperty("username"), prop.getProperty("Password"));
     }
 
