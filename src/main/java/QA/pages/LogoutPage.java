@@ -8,7 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 public class LogoutPage extends TestBase {
     @FindBy(xpath = "//body/div[@id='ui']/div[@class='ui fluid container']/div[@class='ui fluid container']/div[@id='top-header-menu']/div[@class='right menu']/div[@class='ui buttons']/div[@role='listbox']/i[1]")
     WebElement setting_btn ;
-    @FindBy(xpath = "//*[@id=\"top-header-menu\"]/div[2]/div[2]/div/div/a[10]")
+    @FindBy(xpath = "//span[normalize-space()='Log Out']")
     WebElement LogoutBtn ;
 
     public LogoutPage(){

@@ -20,17 +20,17 @@ public class HomePageTest extends TestBase {
     public void setup() {
         initialization();
         loginPage = new LoginPage();
-        loginPage.login(prop.getProperty("username"), prop.getProperty("Password") );
+        loginPage.login(prop.getProperty("username"), prop.getProperty("Password"));
 
     }
-    @Test(priority = 1)
+    @Test
     public void validateCompanyNameTittle(){
         HomePage homePage=   new HomePage();
        Assert.assertTrue( homePage.VerifyUserNameTittle());
     }
 
     @AfterMethod
-    public void tearDown() {
+    public void tearDown(){
         driver.quit();
     }
 }

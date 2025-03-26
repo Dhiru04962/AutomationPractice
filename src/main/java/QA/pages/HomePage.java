@@ -16,6 +16,7 @@ public class HomePage extends TestBase {
         PageFactory.initElements(driver,this);
 
     }
+
     public boolean VerifyUserNameTittle(){
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         boolean blResult = false;

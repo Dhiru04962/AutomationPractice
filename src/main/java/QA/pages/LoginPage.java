@@ -26,6 +26,7 @@ public class LoginPage extends TestBase {
 
    }
    public void login (String usr, String psd){
+
        username.sendKeys(usr);
        password.sendKeys(psd);
        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
